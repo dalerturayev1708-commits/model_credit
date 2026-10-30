@@ -1,0 +1,701 @@
+{
+  "training_date": "2026-10-30 14:39:09",
+  "dataset_info": {
+    "train_samples": 24000,
+    "test_samples": 6000,
+    "features_count": 23,
+    "feature_ids": [
+      "X1",
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "X6",
+      "X7",
+      "X8",
+      "X9",
+      "X10",
+      "X11",
+      "X12",
+      "X13",
+      "X14",
+      "X15",
+      "X16",
+      "X17",
+      "X18",
+      "X19",
+      "X20",
+      "X21",
+      "X22",
+      "X23"
+    ]
+  },
+  "models": {
+    "knn": {
+      "key": "knn",
+      "display_name": "K-Nearest Neighbors (KNN)",
+      "description": "Instance-based learning with StandardScaler and distance weighting (k=5).",
+      "file_name": "knn_model.joblib",
+      "trained_at": "2026-10-30 14:39:09",
+      "metrics": {
+        "accuracy": 0.7897,
+        "precision": 0.5364,
+        "recall": 0.361,
+        "f1": 0.4315,
+        "roc_auc": 0.6999,
+        "weighted_metrics": {
+          "precision": 0.7681,
+          "recall": 0.7897,
+          "f1": 0.7738
+        },
+        "confusion_matrix": [
+          [
+            4259,
+            414
+          ],
+          [
+            848,
+            479
+          ]
+        ],
+        "cm_breakdown": {
+          "true_negatives": 4259,
+          "false_positives": 414,
+          "false_negatives": 848,
+          "true_positives": 479,
+          "specificity": 0.9114
+        },
+        "training_time": 0.0191,
+        "prediction_time": 2.2994,
+        "classification_report": {
+          "Non-Default (0)": {
+            "precision": 0.8339533972978265,
+            "recall": 0.9114059490691204,
+            "f1-score": 0.870961145194274,
+            "support": 4673.0
+          },
+          "Default (1)": {
+            "precision": 0.5363941769316909,
+            "recall": 0.36096458176337604,
+            "f1-score": 0.4315315315315315,
+            "support": 1327.0
+          },
+          "accuracy": 0.7896666666666666,
+          "macro avg": {
+            "precision": 0.6851737871147587,
+            "recall": 0.6361852654162482,
+            "f1-score": 0.6512463383629028,
+            "support": 6000.0
+          },
+          "weighted avg": {
+            "precision": 0.7681432163935161,
+            "recall": 0.7896666666666666,
+            "f1-score": 0.7737739623058641,
+            "support": 6000.0
+          }
+        },
+        "metric_notes": {
+          "primary_precision": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan Precision",
+          "primary_recall": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan Recall",
+          "primary_f1": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan F1-score"
+        }
+      },
+      "feature_importances": {
+        "available": false,
+        "explanation": "Standard KNN does not provide built-in feature importance because it is an instance-based lazy learner based on spatial Euclidean distance.",
+        "explanation_uz": "Oddiy KNN algoritmi masofaga asoslangan bo'lgani sababli ichki xususiyat muhimligi (feature importance) ko'rsatkichiga ega emas."
+      },
+      "feature_names": [
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7",
+        "X8",
+        "X9",
+        "X10",
+        "X11",
+        "X12",
+        "X13",
+        "X14",
+        "X15",
+        "X16",
+        "X17",
+        "X18",
+        "X19",
+        "X20",
+        "X21",
+        "X22",
+        "X23"
+      ]
+    },
+    "random_forest": {
+      "key": "random_forest",
+      "display_name": "Random Forest",
+      "description": "Ensemble of 100 trees with balanced class weighting for default detection.",
+      "file_name": "random_forest_model.joblib",
+      "trained_at": "2026-10-30 14:39:09",
+      "metrics": {
+        "accuracy": 0.8002,
+        "precision": 0.5548,
+        "recall": 0.4883,
+        "f1": 0.5194,
+        "roc_auc": 0.7589,
+        "weighted_metrics": {
+          "precision": 0.7921,
+          "recall": 0.8002,
+          "f1": 0.7955
+        },
+        "confusion_matrix": [
+          [
+            4153,
+            520
+          ],
+          [
+            679,
+            648
+          ]
+        ],
+        "cm_breakdown": {
+          "true_negatives": 4153,
+          "false_positives": 520,
+          "false_negatives": 679,
+          "true_positives": 648,
+          "specificity": 0.8887
+        },
+        "training_time": 1.8551,
+        "prediction_time": 0.186,
+        "classification_report": {
+          "Non-Default (0)": {
+            "precision": 0.859478476821192,
+            "recall": 0.8887224481061416,
+            "f1-score": 0.8738558653340347,
+            "support": 4673.0
+          },
+          "Default (1)": {
+            "precision": 0.5547945205479452,
+            "recall": 0.4883195177091183,
+            "f1-score": 0.519438877755511,
+            "support": 1327.0
+          },
+          "accuracy": 0.8001666666666667,
+          "macro avg": {
+            "precision": 0.7071364986845686,
+            "recall": 0.68852098290763,
+            "f1-score": 0.6966473715447729,
+            "support": 6000.0
+          },
+          "weighted avg": {
+            "precision": 0.7920925418254255,
+            "recall": 0.8001666666666667,
+            "f1-score": 0.7954706415812512,
+            "support": 6000.0
+          }
+        },
+        "metric_notes": {
+          "primary_precision": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan Precision",
+          "primary_recall": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan Recall",
+          "primary_f1": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan F1-score"
+        }
+      },
+      "feature_importances": [
+        {
+          "feature_id": "X6",
+          "feature_name": "PAY_0",
+          "label": "Payment Status - Sep",
+          "label_uz": "To'lov holati - Sentabr",
+          "importance": 0.1006,
+          "importance_pct": 10.06
+        },
+        {
+          "feature_id": "X1",
+          "feature_name": "LIMIT_BAL",
+          "label": "Credit Limit (NT$)",
+          "label_uz": "Kredit limiti (NT$)",
+          "importance": 0.0644,
+          "importance_pct": 6.44
+        },
+        {
+          "feature_id": "X5",
+          "feature_name": "AGE",
+          "label": "Age (Years)",
+          "label_uz": "Yoshi (Yil)",
+          "importance": 0.0623,
+          "importance_pct": 6.23
+        },
+        {
+          "feature_id": "X12",
+          "feature_name": "BILL_AMT1",
+          "label": "Bill Amount - Sep (NT$)",
+          "label_uz": "Hisob varaqasi - Sentabr (NT$)",
+          "importance": 0.0623,
+          "importance_pct": 6.23
+        },
+        {
+          "feature_id": "X13",
+          "feature_name": "BILL_AMT2",
+          "label": "Bill Amount - Aug (NT$)",
+          "label_uz": "Hisob varaqasi - Avgust (NT$)",
+          "importance": 0.0531,
+          "importance_pct": 5.31
+        },
+        {
+          "feature_id": "X18",
+          "feature_name": "PAY_AMT1",
+          "label": "Previous Payment - Sep (NT$)",
+          "label_uz": "Oldingi to'lov - Sentabr (NT$)",
+          "importance": 0.0511,
+          "importance_pct": 5.11
+        },
+        {
+          "feature_id": "X19",
+          "feature_name": "PAY_AMT2",
+          "label": "Previous Payment - Aug (NT$)",
+          "label_uz": "Oldingi to'lov - Avgust (NT$)",
+          "importance": 0.051,
+          "importance_pct": 5.1
+        },
+        {
+          "feature_id": "X14",
+          "feature_name": "BILL_AMT3",
+          "label": "Bill Amount - Jul (NT$)",
+          "label_uz": "Hisob varaqasi - Iyul (NT$)",
+          "importance": 0.0509,
+          "importance_pct": 5.09
+        },
+        {
+          "feature_id": "X15",
+          "feature_name": "BILL_AMT4",
+          "label": "Bill Amount - Jun (NT$)",
+          "label_uz": "Hisob varaqasi - Iyun (NT$)",
+          "importance": 0.0491,
+          "importance_pct": 4.91
+        },
+        {
+          "feature_id": "X20",
+          "feature_name": "PAY_AMT3",
+          "label": "Previous Payment - Jul (NT$)",
+          "label_uz": "Oldingi to'lov - Iyul (NT$)",
+          "importance": 0.0486,
+          "importance_pct": 4.86
+        },
+        {
+          "feature_id": "X16",
+          "feature_name": "BILL_AMT5",
+          "label": "Bill Amount - May (NT$)",
+          "label_uz": "Hisob varaqasi - May (NT$)",
+          "importance": 0.0485,
+          "importance_pct": 4.85
+        },
+        {
+          "feature_id": "X17",
+          "feature_name": "BILL_AMT6",
+          "label": "Bill Amount - Apr (NT$)",
+          "label_uz": "Hisob varaqasi - Aprel (NT$)",
+          "importance": 0.0482,
+          "importance_pct": 4.82
+        },
+        {
+          "feature_id": "X23",
+          "feature_name": "PAY_AMT6",
+          "label": "Previous Payment - Apr (NT$)",
+          "label_uz": "Oldingi to'lov - Aprel (NT$)",
+          "importance": 0.0468,
+          "importance_pct": 4.68
+        },
+        {
+          "feature_id": "X22",
+          "feature_name": "PAY_AMT5",
+          "label": "Previous Payment - May (NT$)",
+          "label_uz": "Oldingi to'lov - May (NT$)",
+          "importance": 0.0445,
+          "importance_pct": 4.45
+        },
+        {
+          "feature_id": "X21",
+          "feature_name": "PAY_AMT4",
+          "label": "Previous Payment - Jun (NT$)",
+          "label_uz": "Oldingi to'lov - Iyun (NT$)",
+          "importance": 0.0444,
+          "importance_pct": 4.44
+        },
+        {
+          "feature_id": "X7",
+          "feature_name": "PAY_2",
+          "label": "Payment Status - Aug",
+          "label_uz": "To'lov holati - Avgust",
+          "importance": 0.0422,
+          "importance_pct": 4.22
+        },
+        {
+          "feature_id": "X8",
+          "feature_name": "PAY_3",
+          "label": "Payment Status - Jul",
+          "label_uz": "To'lov holati - Iyul",
+          "importance": 0.0239,
+          "importance_pct": 2.39
+        },
+        {
+          "feature_id": "X9",
+          "feature_name": "PAY_4",
+          "label": "Payment Status - Jun",
+          "label_uz": "To'lov holati - Iyun",
+          "importance": 0.0236,
+          "importance_pct": 2.36
+        },
+        {
+          "feature_id": "X11",
+          "feature_name": "PAY_6",
+          "label": "Payment Status - Apr",
+          "label_uz": "To'lov holati - Aprel",
+          "importance": 0.0211,
+          "importance_pct": 2.11
+        },
+        {
+          "feature_id": "X3",
+          "feature_name": "EDUCATION",
+          "label": "Education Level",
+          "label_uz": "Ma'lumoti darajasi",
+          "importance": 0.0199,
+          "importance_pct": 1.99
+        },
+        {
+          "feature_id": "X10",
+          "feature_name": "PAY_5",
+          "label": "Payment Status - May",
+          "label_uz": "To'lov holati - May",
+          "importance": 0.019,
+          "importance_pct": 1.9
+        },
+        {
+          "feature_id": "X4",
+          "feature_name": "MARRIAGE",
+          "label": "Marital Status",
+          "label_uz": "Oilaviy holati",
+          "importance": 0.0129,
+          "importance_pct": 1.29
+        },
+        {
+          "feature_id": "X2",
+          "feature_name": "SEX",
+          "label": "Gender",
+          "label_uz": "Jinsi",
+          "importance": 0.0116,
+          "importance_pct": 1.16
+        }
+      ],
+      "feature_names": [
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7",
+        "X8",
+        "X9",
+        "X10",
+        "X11",
+        "X12",
+        "X13",
+        "X14",
+        "X15",
+        "X16",
+        "X17",
+        "X18",
+        "X19",
+        "X20",
+        "X21",
+        "X22",
+        "X23"
+      ]
+    },
+    "decision_tree": {
+      "key": "decision_tree",
+      "display_name": "Decision Tree",
+      "description": "Interpretable tree model with max_depth=5 and balanced class weighting.",
+      "file_name": "decision_tree_model.joblib",
+      "trained_at": "2026-10-30 14:39:09",
+      "metrics": {
+        "accuracy": 0.7708,
+        "precision": 0.4841,
+        "recall": 0.5516,
+        "f1": 0.5157,
+        "roc_auc": 0.7571,
+        "weighted_metrics": {
+          "precision": 0.7827,
+          "recall": 0.7708,
+          "f1": 0.776
+        },
+        "confusion_matrix": [
+          [
+            3893,
+            780
+          ],
+          [
+            595,
+            732
+          ]
+        ],
+        "cm_breakdown": {
+          "true_negatives": 3893,
+          "false_positives": 780,
+          "false_negatives": 595,
+          "true_positives": 732,
+          "specificity": 0.8331
+        },
+        "training_time": 0.1593,
+        "prediction_time": 0.0466,
+        "classification_report": {
+          "Non-Default (0)": {
+            "precision": 0.8674242424242424,
+            "recall": 0.8330836721592125,
+            "f1-score": 0.8499072153695012,
+            "support": 4673.0
+          },
+          "Default (1)": {
+            "precision": 0.48412698412698413,
+            "recall": 0.5516201959306707,
+            "f1-score": 0.5156745332863685,
+            "support": 1327.0
+          },
+          "accuracy": 0.7708333333333334,
+          "macro avg": {
+            "precision": 0.6757756132756133,
+            "recall": 0.6923519340449416,
+            "f1-score": 0.6827908743279348,
+            "support": 6000.0
+          },
+          "weighted avg": {
+            "precision": 0.7826516654641655,
+            "recall": 0.7708333333333334,
+            "f1-score": 0.775986087182115,
+            "support": 6000.0
+          }
+        },
+        "metric_notes": {
+          "primary_precision": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan Precision",
+          "primary_recall": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan Recall",
+          "primary_f1": "Kredit qaytarmaslik (Default=1) bo'yicha hisoblangan F1-score"
+        }
+      },
+      "feature_importances": [
+        {
+          "feature_id": "X6",
+          "feature_name": "PAY_0",
+          "label": "Payment Status - Sep",
+          "label_uz": "To'lov holati - Sentabr",
+          "importance": 0.7436,
+          "importance_pct": 74.36
+        },
+        {
+          "feature_id": "X19",
+          "feature_name": "PAY_AMT2",
+          "label": "Previous Payment - Aug (NT$)",
+          "label_uz": "Oldingi to'lov - Avgust (NT$)",
+          "importance": 0.076,
+          "importance_pct": 7.6
+        },
+        {
+          "feature_id": "X9",
+          "feature_name": "PAY_4",
+          "label": "Payment Status - Jun",
+          "label_uz": "To'lov holati - Iyun",
+          "importance": 0.0371,
+          "importance_pct": 3.71
+        },
+        {
+          "feature_id": "X1",
+          "feature_name": "LIMIT_BAL",
+          "label": "Credit Limit (NT$)",
+          "label_uz": "Kredit limiti (NT$)",
+          "importance": 0.0263,
+          "importance_pct": 2.63
+        },
+        {
+          "feature_id": "X8",
+          "feature_name": "PAY_3",
+          "label": "Payment Status - Jul",
+          "label_uz": "To'lov holati - Iyul",
+          "importance": 0.0216,
+          "importance_pct": 2.16
+        },
+        {
+          "feature_id": "X7",
+          "feature_name": "PAY_2",
+          "label": "Payment Status - Aug",
+          "label_uz": "To'lov holati - Avgust",
+          "importance": 0.0199,
+          "importance_pct": 1.99
+        },
+        {
+          "feature_id": "X20",
+          "feature_name": "PAY_AMT3",
+          "label": "Previous Payment - Jul (NT$)",
+          "label_uz": "Oldingi to'lov - Iyul (NT$)",
+          "importance": 0.0159,
+          "importance_pct": 1.59
+        },
+        {
+          "feature_id": "X21",
+          "feature_name": "PAY_AMT4",
+          "label": "Previous Payment - Jun (NT$)",
+          "label_uz": "Oldingi to'lov - Iyun (NT$)",
+          "importance": 0.015,
+          "importance_pct": 1.5
+        },
+        {
+          "feature_id": "X18",
+          "feature_name": "PAY_AMT1",
+          "label": "Previous Payment - Sep (NT$)",
+          "label_uz": "Oldingi to'lov - Sentabr (NT$)",
+          "importance": 0.0123,
+          "importance_pct": 1.23
+        },
+        {
+          "feature_id": "X13",
+          "feature_name": "BILL_AMT2",
+          "label": "Bill Amount - Aug (NT$)",
+          "label_uz": "Hisob varaqasi - Avgust (NT$)",
+          "importance": 0.0089,
+          "importance_pct": 0.89
+        },
+        {
+          "feature_id": "X12",
+          "feature_name": "BILL_AMT1",
+          "label": "Bill Amount - Sep (NT$)",
+          "label_uz": "Hisob varaqasi - Sentabr (NT$)",
+          "importance": 0.0059,
+          "importance_pct": 0.59
+        },
+        {
+          "feature_id": "X5",
+          "feature_name": "AGE",
+          "label": "Age (Years)",
+          "label_uz": "Yoshi (Yil)",
+          "importance": 0.0048,
+          "importance_pct": 0.48
+        },
+        {
+          "feature_id": "X10",
+          "feature_name": "PAY_5",
+          "label": "Payment Status - May",
+          "label_uz": "To'lov holati - May",
+          "importance": 0.0044,
+          "importance_pct": 0.44
+        },
+        {
+          "feature_id": "X11",
+          "feature_name": "PAY_6",
+          "label": "Payment Status - Apr",
+          "label_uz": "To'lov holati - Aprel",
+          "importance": 0.004,
+          "importance_pct": 0.4
+        },
+        {
+          "feature_id": "X3",
+          "feature_name": "EDUCATION",
+          "label": "Education Level",
+          "label_uz": "Ma'lumoti darajasi",
+          "importance": 0.0022,
+          "importance_pct": 0.22
+        },
+        {
+          "feature_id": "X22",
+          "feature_name": "PAY_AMT5",
+          "label": "Previous Payment - May (NT$)",
+          "label_uz": "Oldingi to'lov - May (NT$)",
+          "importance": 0.0022,
+          "importance_pct": 0.22
+        },
+        {
+          "feature_id": "X2",
+          "feature_name": "SEX",
+          "label": "Gender",
+          "label_uz": "Jinsi",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        },
+        {
+          "feature_id": "X4",
+          "feature_name": "MARRIAGE",
+          "label": "Marital Status",
+          "label_uz": "Oilaviy holati",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        },
+        {
+          "feature_id": "X14",
+          "feature_name": "BILL_AMT3",
+          "label": "Bill Amount - Jul (NT$)",
+          "label_uz": "Hisob varaqasi - Iyul (NT$)",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        },
+        {
+          "feature_id": "X15",
+          "feature_name": "BILL_AMT4",
+          "label": "Bill Amount - Jun (NT$)",
+          "label_uz": "Hisob varaqasi - Iyun (NT$)",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        },
+        {
+          "feature_id": "X16",
+          "feature_name": "BILL_AMT5",
+          "label": "Bill Amount - May (NT$)",
+          "label_uz": "Hisob varaqasi - May (NT$)",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        },
+        {
+          "feature_id": "X17",
+          "feature_name": "BILL_AMT6",
+          "label": "Bill Amount - Apr (NT$)",
+          "label_uz": "Hisob varaqasi - Aprel (NT$)",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        },
+        {
+          "feature_id": "X23",
+          "feature_name": "PAY_AMT6",
+          "label": "Previous Payment - Apr (NT$)",
+          "label_uz": "Oldingi to'lov - Aprel (NT$)",
+          "importance": 0.0,
+          "importance_pct": 0.0
+        }
+      ],
+      "feature_names": [
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7",
+        "X8",
+        "X9",
+        "X10",
+        "X11",
+        "X12",
+        "X13",
+        "X14",
+        "X15",
+        "X16",
+        "X17",
+        "X18",
+        "X19",
+        "X20",
+        "X21",
+        "X22",
+        "X23"
+      ]
+    }
+  },
+  "best_model_by_f1": {
+    "model_name": "Random Forest",
+    "f1_score": 0.5194
+  }
+}
